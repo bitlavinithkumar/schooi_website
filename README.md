@@ -13,14 +13,14 @@ kubectl get pods
 kubectl describe pods
 kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
 kubectl scale deployment mynginx --replicas=4
-kubectl get service myngnix
+kubectl get service mynginx
 kubectl port-forward svc/mynginx 8081:80
 
 stop nginx deployment:
 kubectl delete deployment mynginx
 kubectl delete service mynginx
 minikube stop
-minikube delete
+
 
 Nagios Automation steps:
 docker pull jasonrivers/nagios:latest
